@@ -1,5 +1,5 @@
 """Zenvora backend (Render Python runtime, no Docker): pure-Python PDF tools + serves ./static."""
-import os, re, shutil, tempfile, zipfile, pathlib
+import os, re, shutil, tempfile, zipfile, pathlib, subprocess
 
 from fastapi import BackgroundTasks, FastAPI, File, HTTPException, Query, UploadFile
 from fastapi.responses import FileResponse
@@ -145,7 +145,44 @@ def ocr(): not_here("OCR PDF")
 def pdf_to_ppt(): not_here("PDF to PPT")
 
 @app.post("/api/office-to-pdf")
-def office_to_pdf(): not_here("Word/PPT/Excel to PDF")
+def office_to_pdf(bg: BackgroundTasks, file: UploadFile = File(...)):
+    allowed = {".doc", ".docx", ".ppt", ".pptx", ".xls", ".xlsx"}
+    d = workdir(bg)
+    src = store(file, d, allowed)
+
+    try:
+        result = subprocess.run(
+            [
+                "libreoffice",
+                "--headless",
+                "--convert-to", "pdf",
+                "--outdir", str(d),
+                str(src)
+            ],
+            capture_output=True,
+            text=True,
+            timeout=120
+        )
+
+        converted = d / f"{src.stem}.pdf"
+
+        if result.returncode != 0 or not converted.exists():
+            raise Exception(result.stderr or result.stdout or "Conversion failed")
+
+        out = d / "out.pdf"
+        converted.rename(out)
+
+    except subprocess.TimeoutExpired:
+        raise HTTPException(504, "Conversion timed out. Try a smaller file.")
+    except Exception as e:
+        raise HTTPException(422, f"Office to PDF conversion failed: {e}")
+
+    return FileResponse(
+        out,
+        filename=f"{src.stem}.pdf",
+        media_type="application/pdf"
+    )
+
 
 @app.post("/api/html-to-pdf")
 def html_to_pdf(): not_here("HTML to PDF")
