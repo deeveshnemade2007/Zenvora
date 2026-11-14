@@ -1,189 +1,1187 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Zenvora – PDF &amp; Image Tools</title>
-<link rel="icon" href="data:image/webp;base64,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">
-<style>
-:root{--navy:#004578;--mid:#106ebe;--sky:#2b88d8;--ice:#c7e0f4;--bg:#fff;--card:#fff;--text:#004578;--muted:#3f6a8f;--line:#c7e0f4;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#00233f;--card:#003560;--text:#eaf4ff;--muted:#a9c8e4;--line:#0a4c80;--ice:#003560}}
-:root[data-theme="dark"]{color-scheme:dark;--bg:#00233f;--card:#003560;--text:#eaf4ff;--muted:#a9c8e4;--line:#0a4c80;--ice:#003560}
-html{scroll-padding-top:env(safe-area-inset-top,0px)}*{box-sizing:border-box}[hidden]{display:none!important}
-body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.5}
-header{display:flex;align-items:center;justify-content:space-between;padding:10px 5%;border-bottom:1px solid var(--line);position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);z-index:5}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:6}
-.logo{display:flex;gap:10px;align-items:center;font-weight:800;font-size:1.35rem;text-decoration:none;color:var(--text)}
-.logo img{width:42px;height:42px;border-radius:11px}
-nav a{color:var(--muted);text-decoration:none;margin-left:6px;font-weight:700;font-size:.95rem;padding:8px 14px;border-radius:999px}
-nav a:hover{color:var(--sky)}nav a.on{background:var(--navy);color:#fff}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) nav a.on{background:var(--sky);color:#fff}}
-.hero{background:linear-gradient(135deg,#004578,#106ebe);color:#fff;text-align:center;padding:56px 5% 50px}
-.hero h1{font-size:clamp(1.9rem,5vw,3rem);margin:0 0 12px;line-height:1.15}
-.hero p{max-width:620px;margin:0 auto 24px;color:#c7e0f4;font-size:1.08rem}
-.search{max-width:460px;margin:0 auto;display:flex;background:#fff;border-radius:999px;padding:6px;box-shadow:0 8px 24px rgba(0,0,0,.2)}
-.search input{flex:1;border:0;outline:0;padding:10px 18px;font-size:1rem;background:transparent;color:#004578;min-width:0}
-.search span{background:var(--mid);color:#fff;font-weight:700;border-radius:999px;padding:10px 20px}
-main{max-width:1180px;margin:0 auto;padding:36px 5% 10px}
-h2{font-size:1.45rem;margin:0 0 6px}.sub{color:var(--muted);margin:0 0 16px}
-.chips{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 22px}
-.chip{border:1px solid var(--line);background:var(--card);color:var(--text);padding:7px 16px;border-radius:999px;cursor:pointer;font-weight:600;font-size:.9rem}
-.chip.on{background:var(--navy);color:#fff;border-color:var(--navy)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .chip.on{background:var(--sky);color:#fff;border-color:var(--sky)}}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;cursor:pointer;transition:.18s}
-.card:hover{transform:translateY(-4px);border-color:var(--sky);box-shadow:0 10px 24px rgba(43,136,216,.25)}
-.ic{width:46px;height:46px;border-radius:12px;background:var(--ice);display:grid;place-items:center;font-size:1.4rem;margin-bottom:12px;border:1px solid var(--line)}
-.card h3{margin:0 0 6px;font-size:1.05rem}.card p{margin:0;color:var(--muted);font-size:.9rem}
-.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:18px}
-.tool{background:var(--ice);border:1px solid var(--line);border-radius:18px;padding:24px}
-.tool h3{margin:0 0 4px;font-size:1.2rem}
-.drop{display:block;position:relative;border:2px dashed var(--sky);border-radius:14px;padding:28px 16px;text-align:center;color:var(--muted);background:var(--card);cursor:pointer}
-.drop:hover{border-color:var(--navy)}.drop input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer;font-size:0}
-.files{list-style:none;padding:0;margin:10px 0 0}
-.files li{display:flex;justify-content:space-between;gap:8px;padding:7px 12px;border:1px solid var(--line);border-radius:8px;margin-top:6px;font-size:.9rem;background:var(--card);word-break:break-all}
-.files button{border:0;background:none;color:var(--muted);cursor:pointer;font-size:1rem}
-.row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:14px}.row label{font-weight:600}
-.row input,.row select{padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--text);font-size:1rem;width:110px}
-.row input[type=text]{width:100%}.row select{width:auto}
-.btn{background:var(--navy);color:#fff;border:0;padding:11px 22px;border-radius:10px;font-weight:700;cursor:pointer;font-size:1rem}
-.btn:hover{background:var(--mid);color:#fff}
-.md{position:fixed;inset:0;background:rgba(0,35,63,.65);display:grid;place-items:center;z-index:20;padding:16px}
-.mb{background:var(--bg);color:var(--text);border-radius:18px;padding:24px;width:100%;max-width:520px;max-height:90vh;overflow:auto;position:relative}
-.mb h3{margin:0 0 4px}.x{position:absolute;right:14px;top:12px;border:0;background:none;color:var(--muted);font-size:1.2rem;cursor:pointer}
-/* creator section */
-.team{padding:46px 5% 36px;margin-top:40px;border-top:1px solid var(--line);background:var(--ice)}
-.team-in{max-width:950px;margin:0 auto}
-.eyebrow{color:var(--sky);font-size:.78rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;text-align:center;margin-bottom:10px}
-.intro{max-width:680px;margin:0 auto 26px;text-align:center;color:var(--muted);font-size:.95rem;line-height:1.7}
-.cc{display:grid;grid-template-columns:.8fr 1.2fr;gap:20px}
-.box{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px 20px;box-shadow:0 8px 25px rgba(0,69,120,.08)}
-.creator{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
-.av{width:78px;height:78px;border-radius:50%;background:linear-gradient(135deg,#004578,#2b88d8);color:#fff;display:grid;place-items:center;font-size:1.6rem;font-weight:700;margin-bottom:14px}
-.creator h3{margin:0 0 6px;font-size:1.25rem}.role{color:var(--sky);font-size:.9rem;font-weight:600;margin:0}
-.box h3.t{text-align:center;font-size:1.25rem;margin:0 0 8px}.box p.i{text-align:center;color:var(--muted);font-size:.9rem;margin:0 0 18px}
-.cl{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.ci{text-decoration:none;background:var(--ice);border:1px solid var(--line);border-radius:12px;padding:14px 8px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:5px;transition:.2s;color:var(--text)}
-.ci:hover{border-color:var(--sky);transform:translateY(-3px)}.ci b{font-size:.9rem}.ci small{color:var(--sky);font-size:.76rem;overflow-wrap:anywhere}.ci span{font-size:1.4rem}
-.copy{text-align:center;color:var(--muted);font-size:.85rem;margin-top:26px}
-#toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translateX(-50%) translateY(90px);background:var(--navy);color:#fff;padding:12px 22px;border-radius:12px;transition:.25s;z-index:30;max-width:90%}
-#toast.show{transform:translateX(-50%) translateY(0)}
-@media(max-width:700px){.cc{grid-template-columns:1fr}}
-@media(max-width:560px){.cl{grid-template-columns:1fr}nav a{padding:7px 10px;font-size:.85rem}.logo{font-size:1.15rem}}
-</style>
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#111827">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Zenvora – PDF &amp; Image Tools</title>
+    <link rel="icon" href="data:image/webp;base64,UklGRpINAABXRUJQVlA4IIYNAAAQOACdASqgAKAAPj0cjEQiIaETCN1sIAPEswBm+jlKQk+V/+4/g/8s+ptND3F/z/ul+GPq8/PX+w9wr9VP9b/aPWH9g/7b+oz9fP/B/nve8/DP3a/7v1BP7D/tes09AD9iPTB/an/6/KN+3H7U+0N/4btT4n9YtJJ+DY3lqf/D/l77bPmX9m/23riTX1XczT/x+YD88/xP/p/zXwF/y7+1/8n+39rb9jPZ8/Utnr/BltPR2X7BcCTyz/pmUAbeQ+3ieMnh+bEqGeSICsA7P17QmMNoPZ/Yc1ZiRXff0Uanb2EMtMOL5pMosIYkbn5n9QJQbWOW/yn0XNu+cmm+Z5arBaizzqUbsZ79dZZrVkpVs/qg8i+pVT+HqG4HoectpUorO4sdXDLlfIk6rZGu9uOOthFZeAtOR/jb43XPBPSypCyYXYqfPDjOsXv/6iqHMQfdYgg78656pVIa+C7HI3mQHuKbtdUgBw3+in6TtDgs/ql32ax3CNOW970diNyFsmdGu//wLMsgbZ3tyGLG5gb7dZp2Mztx2uIGSneYhr7+CCZZ8ix9F6X7pak1rPA5KPSoGYzZJmvlAycfNpzVl/V2j2ZcrwSyC2IQAP7/AnH1796JkSAtL/mT6gaXqtzj+7yP2/m3yB3brZxRUmv0GwXRRJCruyeTR1bLxjpu8KSRZLiDBwdjzQ3v4h3XrYIf7+ldqo6ysT8YNCbS0SUobMsUiZJZOj1OxbZKygxt6iPeKv4LjvavSFDWis/swr6gk+/t9Lg9B+cs+EoybYtuKaYvTkcK+aHarfM4ivFGvsFoKvNQcD/G/n7uj6A4BuO4WRPUXJvb/Ur1M97wr58o4qcvFFMpOKgNmgVAJ3PpMYGb4Rs7YxsZn/L42R6WABlcUs637/DVtiKHs/mQzPcTStDJTrRSl2JfP0qMyMmu+zVQKsVW8nna+0tvUc+7H0+qdn/2V/bhGQ7NjyPw43/rv+Q+ewJOMGzAdDVCl2/ke4+dJUigRlkeImN9BXDAcZmBmSubGVDwmGQe4N46dn37eB/9NEWSxnjG12FaW7UME1TGfa+z1J2d3iMMfaZ2KniqhzPwFNAuFlcGey61yZf4AQUIMA9d3gSr8/Lny6Fa1d9rEuKXn4qP6ItuxXA5b3CLBbyX04fic+cebko3JRI7kd1Gn+t89of+7XsLw0IZ9JY9qKFhnX24zgd/7Hm/BI7/rSKdWWezXkDARWPd5ope93nCeVxCK9MZ01D5I7VcYuP/ESYk1GlnWMJLS+pZ15BAJHGmctHAMx6EoTMDzn8XYHl4Sw5qFrmMJ7t0jyL/fRkh3/p+VcNIe+FcW/lUBN+YY5TuTlPVBCT8O6GaAXWQDsvQWxU9YNqS8SjyK8fWFrURMclZ7Pawqx1VAuz1fT+ZyNqNUcHpRC+C2YtCw5NF6b20IJ/vthq3w35KwUCa2Vuhy6op3NZTqpML2r47E4LZZGbZnVlTPcOYQWpjyBxGxNkWesPhn5HyZmwkJtuMjqEb+Ns68aLmTwMCHglaJiX13nJB+36X8CWdAAj/oNiqc8Ys0fVgQb7WsIXOai3/n7vDPk2czuBJnIrjmfl+5QgV4eFOTi7UDJ6NAloUHuNBGzxUYH7LHpJqPLD2x6gYm/GtAJAs+4vn6Wk8u0K+Ym6JNuk56sQeuexLj8zgb8aTNViI3dCO5FhtL/4tvfZmHqu/3suTOFNuCPVGv8q99Bst1fattsPBgo8a12UbnZ2Ph71A/iwDSxi3zzQEjtNXHq/u8XxT3L9B0oC7/Z+dbpdqglbKddqUsp2XjngFBNsyTAgUmWfxhvHiT9JXiX1zH9t9KIaDKA2JOg/cSUiyMlnaVhqEb4uo21cHORHqUFCR8HGkdZ3gaN22815iZ6ZYDcEfsPu/otNYQOZiOPr1ngqvIivlwDvkh6Gg5YB+/J92kAY7W03QrNvRFhOEPRF5Ru6Ot+BUssK0jTw5YsGNeBoy8XJIvM12yv0e9gNL/n7ExBIvuyxeSZGxIOM2AyjhGzOdstU+332xdeh8X01SayDlUn8KIzAflwk07I3AmSE7yv/pnr6QUiaeQadh0CcEw5BVfQcvOJasiNmTmlqbsb1/5k8E/JRAgogIRLKJN6/OUD/vgPLdg/wyvJn5/oL01mbcibm2P8IDDHv8N7ZdJcn7FuG9XVSHmwU37bubqqsj94nXoH1xFFJeHXHmumbbv/8flNty/x1e6gMngAufKa4M92bjZ0bHquWppWEtaG9Y5BIwGe8RuTdQ8RGKgdj37mbv0mEJz0cGZXGE6lyiC4j2Sb3HaZGFf4ypSCeR1ve8nNnDmBf8Qe17r3H/p/hHj07+8+QqiS9Su+wkB2CKTSM8fdqvrJriQ8T5uSulkx5Ynf+WuPFvO5ZImLY/GA3iHGkf0P80txXc5GnBD2PEpZt8rY+eP9VZyVul8plicQbHn7J5FS8VtxCK3VZ1joiTFs7fwolzSEj2m/Ah+M53whWSY+uMp/mWt5z7davoCrGqfr4DfSGqmdzztqqvvnBmBnR53lnLiAy51go1uMMAtXnrfPrrsXs47pY8M1ue9CDH4ZZrmyP5uysKKpui//yOQGqiy8a7DHYlrY/SzbGBijavUc4bSmd+k/tGOQP5JwSWYWUSVB5xWQ6wpbXOZL4XnAK68EILcyL3v5nqB8e6FFYsr1aRTDGfDqvvH58ul6jbZcNGCCirDeEguo3u+Pc/O61G4AG7/wmX4KG83ObItPxuYM8oD2tnHbh1IfaHiwNig27RAZaJHaQX+WfRw30+ynxSbiCv/Nfhp3mNnpwDEDfLRiftphuHGfmNilka24navVAE7FPxJPj1S8j4tBHsIAt4gACUtPCo1FzIv85XAdk/Dvjun8PsABwF9g/61QdEwvn9TEa/cOFRbo33FbMoNa4vYzRkwCsf35x/2CphW6BDcbBclTgnvg6cXJ/KEJ8xVhiu5lRkd6lomSTc8shI7VezEktKXU2BcdrYVtQ+8RltdnvuiBUVS8hbOd42r978ogckPiEANmeZnR1eDDJFdF9J7siIK8r/iz/SJ6Z995MvlMuTa9cHVZOTtOhkA12Ced9ZmvY1t5kReMkxgs2E5xrLhIi+UnaJiiYD1+Q7h86VhGDxfbozoOeaMgOZhYk1Ux3rmNRq3nrTuGNUo+RdXe/BBK+cjD7Pjox1pNnzLlqcrdFuI2viWD56Xf34poIyZhS2B6jxzjYtq3jl1MK11PxWx/5K1i685kAK9eQU/CgphugZfdvP5Ga2dWNsuWVHo/ePEKfwjdbVheC8OzIWF46ZQJ9iuJyj/xb9YPweunFHM6nHDwJ3lhCe8r4odfD0XThDBRfYZ6tcjK0tgC/iEFV+RDdmgFUvwYE0gww9Ij5VGaF6gkyYuslctiersSBNZ9N+3/NN9oO5+V+xJU2GYzdOLn2J42PFxAd606c4dXT2/jJ+yYNbSxf4cqT0VRpFuAQN64+KP2Mc95LeYNgFtDPMKNZihavvCXsTfyUqL85IQbxSrEbosqq/oio+hV0ZtHKYy6DwRP4SMbgJGgBMg4KqRS+Un0mNjvLxFoRn+BVr1FHMUjTIpETAnN01PEE0y9u9TR5VTs9DeQYWXmfkl5oUQExwaSgKoJUSBrQY/IY3LF9FRWmPU+rJRHHzXM+7bxdiEOWtHkm0a40XFxcNxiTneW3IIjVjLTJlgW6I6hb2vxqBtN/K9NWSH9+FRMG5kRXG0X1M6Dcv/jx/+Dxs4/P1UbFSpCgQBvrHF4FrewpTY+aqYg+Fodwo3VqLmOep076fzzo5nVpuC0hZHQh4gsd+yua26U+NCNCVSTnkO+KYyDCGhgWBU3q4ZF1CzLG/QO7FRGCAqdMw7oDVFrj2EZz2iEjdE9nMtNo9GZr96iYKQZUrDbrD85ILzunLTGf/aiNrF6YpI8MM67xBIZ/0LRdKDQl78ZCSJr1t1ABsTnrZQFz93hqALqTVqeEtJve/5i2Y8yuvGcsfUFdr7qQbIU1n45u+RoLxQrDbc+HgQjtVYgU2I/j9Gl5cR6BlyiNvgCLP4SDighovtNYYZo5OprY3T9RxCOVNZPFhGHE/bTFXy0TrBv+dB1NFpvsWcYf1zT2F4gwLhJDKhzEP0blm0fL6INZ7JcddBZXTPMtmLDoxPX9ZheOoJtaIJfQjCJFfB1I7DkH1RYG6vplc+vqhleizgStl9vFmlmAlwoEJs0dzbxcC/gjaWNOlya7vY/xO0sMpYb5uwVLZ/szxmOj6xcLJHHiEqiCTWlxn4a/6g/eGoPXtOQW3MnocmeGqfDRn7hcZJXby4IhyfCcji5vZNZu7Zjem+ajZ4M8QkWwQWNnLbZw3FwBb8HEUeWGYuXowYqLh6LfBwLvrBfR3Hv4X9qcsAocCz2KsIc0780DutiKF6ZGyVSpLdeXE69WZuHqoYWR/kXi3j+lj2VhSqUO0z3Lgsd4zb8PrRl1ElF/V1gd3Y8fxKsT5FlBP7dSju0d2dvlxYsz1oG1t3n5SEkjVt5/KhTnnkSUDdsDwKURwo28hMnqEa8SD0bdt631HjrP0s+4H8QQ1pKaa2r+f040YJS9vxVXLjLsxIrXBDdHqY7C5zsLIJwasAAA=">
+    <style>
+         :root {
+            --navy: #004578;
+            --mid: #106ebe;
+            --sky: #2b88d8;
+            --ice: #c7e0f4;
+            --bg: #fff;
+            --card: #fff;
+            --text: #004578;
+            --muted: #3f6a8f;
+            --line: #c7e0f4;
+            box-sizing: border-box;
+            padding-top: env(safe-area-inset-top, 0px);
+            padding-bottom: env(safe-area-inset-bottom, 0px)
+        }
+        
+        @media (prefers-color-scheme:dark) {
+             :root:not([data-theme="light"]) {
+                color-scheme: dark;
+                --bg: #00233f;
+                --card: #003560;
+                --text: #eaf4ff;
+                --muted: #a9c8e4;
+                --line: #0a4c80;
+                --ice: #003560
+            }
+        }
+        
+         :root[data-theme="dark"] {
+            color-scheme: dark;
+            --bg: #00233f;
+            --card: #003560;
+            --text: #eaf4ff;
+            --muted: #a9c8e4;
+            --line: #0a4c80;
+            --ice: #003560
+        }
+        
+        html {
+            scroll-padding-top: env(safe-area-inset-top, 0px)
+        }
+        
+        * {
+            box-sizing: border-box
+        }
+        
+        [hidden] {
+            display: none!important
+        }
+        
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+            line-height: 1.5
+        }
+        
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 5%;
+            border-bottom: 1px solid var(--line);
+            position: sticky;
+            top: env(safe-area-inset-top, 0px);
+            background: var(--bg);
+            z-index: 5
+        }
+        
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0 0 auto;
+            height: env(safe-area-inset-top, 0px);
+            background: var(--bg);
+            z-index: 6
+        }
+        
+        .logo {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            font-weight: 800;
+            font-size: 1.35rem;
+            text-decoration: none;
+            color: var(--text)
+        }
+        
+        .logo img {
+            width: 42px;
+            height: 42px;
+            border-radius: 11px
+        }
+        
+        nav a {
+            color: var(--muted);
+            text-decoration: none;
+            margin-left: 6px;
+            font-weight: 700;
+            font-size: .95rem;
+            padding: 8px 14px;
+            border-radius: 999px
+        }
+        
+        nav a:hover {
+            color: var(--sky)
+        }
+        
+        nav a.on {
+            background: var(--navy);
+            color: #fff
+        }
+        
+        @media (prefers-color-scheme:dark) {
+             :root:not([data-theme="light"]) nav a.on {
+                background: var(--sky);
+                color: #fff
+            }
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #004578, #106ebe);
+            color: #fff;
+            text-align: center;
+            padding: 56px 5% 50px
+        }
+        
+        .hero h1 {
+            font-size: clamp(1.9rem, 5vw, 3rem);
+            margin: 0 0 12px;
+            line-height: 1.15
+        }
+        
+        .hero p {
+            max-width: 620px;
+            margin: 0 auto 24px;
+            color: #c7e0f4;
+            font-size: 1.08rem
+        }
+        
+        .search {
+            max-width: 460px;
+            margin: 0 auto;
+            display: flex;
+            background: #fff;
+            border-radius: 999px;
+            padding: 6px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .2)
+        }
+        
+        .search input {
+            flex: 1;
+            border: 0;
+            outline: 0;
+            padding: 10px 18px;
+            font-size: 1rem;
+            background: transparent;
+            color: #004578;
+            min-width: 0
+        }
+        
+        .search span {
+            background: var(--mid);
+            color: #fff;
+            font-weight: 700;
+            border-radius: 999px;
+            padding: 10px 20px
+        }
+        
+        main {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 36px 5% 10px
+        }
+        
+        h2 {
+            font-size: 1.45rem;
+            margin: 0 0 6px
+        }
+        
+        .sub {
+            color: var(--muted);
+            margin: 0 0 16px
+        }
+        
+        .chips {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin: 14px 0 22px
+        }
+        
+        .chip {
+            border: 1px solid var(--line);
+            background: var(--card);
+            color: var(--text);
+            padding: 7px 16px;
+            border-radius: 999px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: .9rem
+        }
+        
+        .chip.on {
+            background: var(--navy);
+            color: #fff;
+            border-color: var(--navy)
+        }
+        
+        @media (prefers-color-scheme:dark) {
+             :root:not([data-theme="light"]) .chip.on {
+                background: var(--sky);
+                color: #fff;
+                border-color: var(--sky)
+            }
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 16px
+        }
+        
+        .card {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            padding: 20px;
+            cursor: pointer;
+            transition: .18s
+        }
+        
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: var(--sky);
+            box-shadow: 0 10px 24px rgba(43, 136, 216, .25)
+        }
+        
+        .ic {
+            width: 46px;
+            height: 46px;
+            border-radius: 12px;
+            background: var(--ice);
+            display: grid;
+            place-items: center;
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            border: 1px solid var(--line)
+        }
+        
+        .card h3 {
+            margin: 0 0 6px;
+            font-size: 1.05rem
+        }
+        
+        .card p {
+            margin: 0;
+            color: var(--muted);
+            font-size: .9rem
+        }
+        
+        .two {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+            gap: 18px
+        }
+        
+        .tool {
+            background: var(--ice);
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 24px
+        }
+        
+        .tool h3 {
+            margin: 0 0 4px;
+            font-size: 1.2rem
+        }
+        
+        .drop {
+            display: block;
+            position: relative;
+            border: 2px dashed var(--sky);
+            border-radius: 14px;
+            padding: 28px 16px;
+            text-align: center;
+            color: var(--muted);
+            background: var(--card);
+            cursor: pointer
+        }
+        
+        .drop:hover {
+            border-color: var(--navy)
+        }
+        
+        .drop input {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: pointer;
+            font-size: 0
+        }
+        
+        .files {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0
+        }
+        
+        .files li {
+            display: flex;
+            justify-content: space-between;
+            gap: 8px;
+            padding: 7px 12px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            margin-top: 6px;
+            font-size: .9rem;
+            background: var(--card);
+            word-break: break-all
+        }
+        
+        .files button {
+            border: 0;
+            background: none;
+            color: var(--muted);
+            cursor: pointer;
+            font-size: 1rem
+        }
+        
+        .row {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-top: 14px
+        }
+        
+        .row label {
+            font-weight: 600
+        }
+        
+        .row input,
+        .row select {
+            padding: 10px 12px;
+            border-radius: 10px;
+            border: 1px solid var(--line);
+            background: var(--card);
+            color: var(--text);
+            font-size: 1rem;
+            width: 110px
+        }
+        
+        .row input[type=text] {
+            width: 100%
+        }
+        
+        .row select {
+            width: auto
+        }
+        
+        .btn {
+            background: var(--navy);
+            color: #fff;
+            border: 0;
+            padding: 11px 22px;
+            border-radius: 10px;
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 1rem
+        }
+        
+        .btn:hover {
+            background: var(--mid);
+            color: #fff
+        }
+        
+        .md {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 35, 63, .65);
+            display: grid;
+            place-items: center;
+            z-index: 20;
+            padding: 16px
+        }
+        
+        .mb {
+            background: var(--bg);
+            color: var(--text);
+            border-radius: 18px;
+            padding: 24px;
+            width: 100%;
+            max-width: 520px;
+            max-height: 90vh;
+            overflow: auto;
+            position: relative
+        }
+        
+        .mb h3 {
+            margin: 0 0 4px
+        }
+        
+        .x {
+            position: absolute;
+            right: 14px;
+            top: 12px;
+            border: 0;
+            background: none;
+            color: var(--muted);
+            font-size: 1.2rem;
+            cursor: pointer
+        }
+        /* creator section */
+        
+        .team {
+            padding: 46px 5% 36px;
+            margin-top: 40px;
+            border-top: 1px solid var(--line);
+            background: var(--ice)
+        }
+        
+        .team-in {
+            max-width: 950px;
+            margin: 0 auto
+        }
+        
+        .eyebrow {
+            color: var(--sky);
+            font-size: .78rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 10px
+        }
+        
+        .intro {
+            max-width: 680px;
+            margin: 0 auto 26px;
+            text-align: center;
+            color: var(--muted);
+            font-size: .95rem;
+            line-height: 1.7
+        }
+        
+        .cc {
+            display: grid;
+            grid-template-columns: .8fr 1.2fr;
+            gap: 20px
+        }
+        
+        .box {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 26px 20px;
+            box-shadow: 0 8px 25px rgba(0, 69, 120, .08)
+        }
+        
+        .creator {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center
+        }
+        
+        .av {
+            width: 78px;
+            height: 78px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #004578, #2b88d8);
+            color: #fff;
+            display: grid;
+            place-items: center;
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 14px
+        }
+        
+        .creator h3 {
+            margin: 0 0 6px;
+            font-size: 1.25rem
+        }
+        
+        .role {
+            color: var(--sky);
+            font-size: .9rem;
+            font-weight: 600;
+            margin: 0
+        }
+        
+        .box h3.t {
+            text-align: center;
+            font-size: 1.25rem;
+            margin: 0 0 8px
+        }
+        
+        .box p.i {
+            text-align: center;
+            color: var(--muted);
+            font-size: .9rem;
+            margin: 0 0 18px
+        }
+        
+        .cl {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px
+        }
+        
+        .ci {
+            text-decoration: none;
+            background: var(--ice);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 14px 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 5px;
+            transition: .2s;
+            color: var(--text)
+        }
+        
+        .ci:hover {
+            border-color: var(--sky);
+            transform: translateY(-3px)
+        }
+        
+        .ci b {
+            font-size: .9rem
+        }
+        
+        .ci small {
+            color: var(--sky);
+            font-size: .76rem;
+            overflow-wrap: anywhere
+        }
+        
+        .ci span {
+            font-size: 1.4rem
+        }
+        
+        .copy {
+            text-align: center;
+            color: var(--muted);
+            font-size: .85rem;
+            margin-top: 26px
+        }
+        
+        #toast {
+            position: fixed;
+            left: 50%;
+            bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+            transform: translateX(-50%) translateY(90px);
+            background: var(--navy);
+            color: #fff;
+            padding: 12px 22px;
+            border-radius: 12px;
+            transition: .25s;
+            z-index: 30;
+            max-width: 90%
+        }
+        
+        #toast.show {
+            transform: translateX(-50%) translateY(0)
+        }
+        
+        @media(max-width:700px) {
+            .cc {
+                grid-template-columns: 1fr
+            }
+        }
+        
+        @media(max-width:560px) {
+            .cl {
+                grid-template-columns: 1fr
+            }
+            nav a {
+                padding: 7px 10px;
+                font-size: .85rem
+            }
+            .logo {
+                font-size: 1.15rem
+            }
+        }
+    </style>
 </head>
+
 <body>
-<header>
-  <a class="logo" href="#pdf"><img src="data:image/webp;base64,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" alt="Zenvora logo"><span>Zenvora</span></a>
-  <nav><a id="n-pdf" href="#pdf">PDF Tools</a><a id="n-img" href="#images">Image Tools</a><a href="#pdf" onclick="goContact(event)">Contact</a></nav>
-</header>
+    <header>
+        <a class="logo" href="#pdf"><img src="data:image/webp;base64,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"
+                alt="Zenvora logo"><span>Zenvora</span></a>
+        <nav><a id="n-pdf" href="#pdf">PDF Tools</a><a id="n-img" href="#images">Image Tools</a><a href="#pdf" onclick="goContact(event)">Contact</a></nav>
+    </header>
 
-<div id="v-pdf">
-  <section class="hero"><h1>All your PDF tools in one place</h1><p>Compress, repair, merge, split and convert. Fast, simple and private in your browser.</p>
-    <div class="search"><input id="q" placeholder="Search a PDF tool, e.g. merge, OCR, Word…" aria-label="Search tools"><span>Search</span></div></section>
-  <main><h2>PDF tools</h2><p class="sub">Pick a tool to get started.</p><div class="chips" id="chips"></div><div class="grid" id="grid"></div></main>
-</div>
+    <div id="v-pdf">
+        <section class="hero">
+            <h1>All your PDF tools in one place</h1>
+            <p>Compress, repair, merge, split and convert. Fast, simple and private in your browser.</p>
+            <div class="search"><input id="q" placeholder="Search a PDF tool, e.g. merge, OCR, Word…" aria-label="Search tools"><span>Search</span></div>
+        </section>
+        <main>
+            <h2>PDF tools</h2>
+            <p class="sub">Pick a tool to get started.</p>
+            <div class="chips" id="chips"></div>
+            <div class="grid" id="grid"></div>
+        </main>
+    </div>
 
-<div id="v-img" hidden>
-  <section class="hero"><h1>Image tools, sized your way</h1><p>Compress images to an exact size or switch between JPG, JPEG and PNG.</p></section>
-  <main><div class="two">
-    <div class="tool"><h3>🗜️ Compress JPEG, JPG, PNG</h3><p class="sub">Type the size you want and we’ll shrink the image to fit.</p>
-      <label class="drop"><span>Drop an image here or click to browse</span><input type="file" id="cf" accept="image/*"></label>
-      <ul class="files" id="cl"></ul>
-      <div class="row"><label for="sz">Target size</label><input id="sz" type="number" min="1" value="200"><select id="un"><option>KB</option><option>MB</option></select><button class="btn" onclick="doCompress()">Compress</button></div>
-      <p class="sub" id="cs" style="margin:10px 0 0"></p></div>
-    <div class="tool"><h3>🔁 Convert image format</h3><p class="sub">JPG, JPEG and PNG in any direction. Select several at once.</p>
-      <label class="drop"><span>Drop images here or click to browse</span><input type="file" id="vf" accept="image/*" multiple></label>
-      <ul class="files" id="vl"></ul>
-      <div class="row"><label for="vt">Convert to</label><select id="vt"><option>JPG</option><option>JPEG</option><option>PNG</option></select><button class="btn" onclick="doConvert()">Convert</button></div>
-      <p class="sub" id="vs" style="margin:10px 0 0"></p></div>
-  </div></main>
-</div>
+    <div id="v-img" hidden>
+        <section class="hero">
+            <h1>Image tools, sized your way</h1>
+            <p>Compress images to an exact size or switch between JPG, JPEG and PNG.</p>
+        </section>
+        <main>
+            <div class="two">
+                <div class="tool">
+                    <h3>🗜️ Compress JPEG, JPG, PNG</h3>
+                    <p class="sub">Type the size you want and we’ll shrink the image to fit.</p>
+                    <label class="drop"><span>Drop an image here or click to browse</span><input type="file" id="cf" accept="image/*"></label>
+                    <ul class="files" id="cl"></ul>
+                    <div class="row"><label for="sz">Target size</label><input id="sz" type="number" min="1" value="200"><select id="un"><option>KB</option><option>MB</option></select><button class="btn" onclick="doCompress()">Compress</button></div>
+                    <p class="sub" id="cs" style="margin:10px 0 0"></p>
+                </div>
+                <div class="tool">
+                    <h3>🔁 Convert image format</h3>
+                    <p class="sub">JPG, JPEG and PNG in any direction. Select several at once.</p>
+                    <label class="drop"><span>Drop images here or click to browse</span><input type="file" id="vf" accept="image/*" multiple></label>
+                    <ul class="files" id="vl"></ul>
+                    <div class="row"><label for="vt">Convert to</label><select id="vt"><option>JPG</option><option>JPEG</option><option>PNG</option></select><button class="btn" onclick="doConvert()">Convert</button></div>
+                    <p class="sub" id="vs" style="margin:10px 0 0"></p>
+                </div>
+            </div>
+        </main>
+    </div>
 
-<section class="team" id="contact"><div class="team-in">
-  <div class="eyebrow">The Mind Behind Zenvora</div>
-  <p class="intro">Zenvora is independently conceptualized, designed, and developed with a vision to make PDF, image, and document management simple, accessible, and efficient.</p>
-  <div class="cc">
-    <article class="box creator"><div class="av">DN</div><h3>Deevesh Nemade</h3><p class="role">Founder &amp; Full-Stack Developer</p></article>
-    <div class="box"><h3 class="t">Get In Touch</h3><p class="i">Have questions, suggestions, or feedback? Feel free to connect with me.</p>
-      <div class="cl">
-        <a class="ci" href="tel:+917972502872"><span>📞</span><b>Phone</b><small>+91 7972502872</small></a>
-        <a class="ci" href="mailto:deeveshnemade2007@gmail.com"><span>✉️</span><b>Email</b><small>Send an Email</small></a>
-        <a class="ci" href="https://www.linkedin.com/in/deeveshnemade2007" target="_blank" rel="noopener noreferrer"><span>🔗</span><b>LinkedIn</b><small>Connect with Me</small></a>
-      </div></div>
-  </div>
-  <div class="copy">© 2026 Zenvora · Made for quick PDF and image work</div>
-</div></section>
+    <section class="team" id="contact">
+        <div class="team-in">
+            <div class="eyebrow">The Mind Behind Zenvora</div>
+            <p class="intro">Zenvora is independently conceptualized, designed, and developed with a vision to make PDF, image, and document management simple, accessible, and efficient.</p>
+            <div class="cc">
+                <article class="box creator">
+                    <div class="av">DN</div>
+                    <h3>Deevesh Nemade</h3>
+                    <p class="role">Founder &amp; Full-Stack Developer</p>
+                </article>
+                <div class="box">
+                    <h3 class="t">Get In Touch</h3>
+                    <p class="i">Have questions, suggestions, or feedback? Feel free to connect with me.</p>
+                    <div class="cl">
+                        <a class="ci" href="tel:+917972502872"><span>📞</span><b>Phone</b><small>+91 7972502872</small></a>
+                        <a class="ci" href="mailto:deeveshnemade2007@gmail.com"><span>✉️</span><b>Email</b><small>Send an Email</small></a>
+                        <a class="ci" href="https://www.linkedin.com/in/deeveshnemade2007" target="_blank" rel="noopener noreferrer"><span>🔗</span><b>LinkedIn</b><small>Connect with Me</small></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copy">© 2026 Zenvora · Made for quick PDF and image work</div>
+        </div>
+    </section>
 
-<div class="md" id="md" hidden><div class="mb"><button class="x" onclick="closeTool()" aria-label="Close">✕</button><h3 id="mt"></h3><p class="sub" id="mp"></p>
-  <label class="drop"><span id="mz">Drop files here or click to browse</span><input type="file" id="mf"></label>
-  <ul class="files" id="ml"></ul><div class="row" id="mo"></div><div class="row"><button class="btn" id="mgo">Run</button></div><p class="sub" id="ms" style="margin-top:10px"></p></div></div>
-<div id="toast" role="status"></div>
+    <div class="md" id="md" hidden>
+        <div class="mb"><button class="x" onclick="closeTool()" aria-label="Close">✕</button>
+            <h3 id="mt"></h3>
+            <p class="sub" id="mp"></p>
+            <label class="drop"><span id="mz">Drop files here or click to browse</span><input type="file" id="mf"></label>
+            <ul class="files" id="ml"></ul>
+            <div class="row" id="mo"></div>
+            <div class="row"><button class="btn" id="mgo">Run</button></div>
+            <p class="sub" id="ms" style="margin-top:10px"></p>
+        </div>
+    </div>
+    <div id="toast" role="status"></div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
-<script>
-function $(i){return document.getElementById(i)}
-var T=[
-["Compress PDF","Reduce file size while optimizing for maximal PDF quality.","🗜️","Optimize"],
-["Repair PDF","Repair a damaged PDF and recover data from a corrupt file.","🛠️","Optimize"],
-["OCR PDF","Convert scanned PDFs into searchable, selectable documents.","🔍","Optimize"],
-["Merge PDF","Combine PDFs in the order you want with the easiest merger.","🧩","Organize"],
-["Split PDF","Separate one page or a whole set into independent PDF files.","✂️","Organize"],
-["Organize PDF","Sort pages, delete pages or add new ones to your document.","🗂️","Organize"],
-["PDF to Word","Convert PDFs into easy-to-edit DOC and DOCX documents.","📝","From PDF"],
-["PDF to PPT","Turn PDFs into easy-to-edit PPT and PPTX slideshows.","📊","From PDF"],
-["PDF to Excel","Pull data straight from PDFs into Excel spreadsheets in seconds.","📈","From PDF"],
-["PDF to JPG/PNG","Convert each page to JPEG, JPG or PNG, or extract all images.","🖼️","From PDF"],
-["Word to PDF","Make DOC and DOCX files easy to read by converting to PDF.","📄","To PDF"],
-["PPT to PDF","Make PPT and PPTX files easy to read by converting to PDF.","📽️","To PDF"],
-["Excel to PDF","Make Excel spreadsheets easy to read by converting to PDF.","📑","To PDF"],
-["JPG/PNG to PDF","Convert images to PDF in seconds and adjust orientation and margins.","🏞️","To PDF"],
-["HTML to PDF","Convert a saved web page (HTML file) into a PDF with one click.","🌐","To PDF"]];
-var cats=["All","Optimize","Organize","From PDF","To PDF"],cur="All",q=$("q");
-function toast(m){var t=$("toast");t.textContent=m;t.className="show";clearTimeout(window._t);window._t=setTimeout(function(){t.className=""},2800)}
-function render(){var s=q.value.toLowerCase(),c=$("chips"),g=$("grid");c.innerHTML="";g.innerHTML="";
- cats.forEach(function(k){var b=document.createElement("button");b.className="chip"+(k===cur?" on":"");b.textContent=k;b.onclick=function(){cur=k;render()};c.appendChild(b)});
- T.filter(function(t){return(cur==="All"||t[3]===cur)&&(t[0]+" "+t[1]).toLowerCase().indexOf(s)>-1}).forEach(function(t){var d=document.createElement("div");d.className="card";d.innerHTML='<div class="ic">'+t[2]+'</div><h3>'+t[0]+'</h3><p>'+t[1]+'</p>';d.onclick=function(){openTool(t)};g.appendChild(d)});
- if(!g.children.length)g.innerHTML='<p class="sub">No tools match your search.</p>'}
-q.oninput=render;render();
-function route(){var v=location.hash==="#images"?"images":"pdf";$("v-pdf").hidden=v!=="pdf";$("v-img").hidden=v!=="images";$("n-pdf").className=v==="pdf"?"on":"";$("n-img").className=v==="images"?"on":"";window.scrollTo(0,0)}
-addEventListener("hashchange",route);route();
-function goContact(e){e.preventDefault();$("contact").scrollIntoView({behavior:"smooth"})}
-var DL=null;try{if(window.claude&&claude.use)claude.use("downloads").then(function(d){DL=d}).catch(function(){})}catch(e){}
-function save(b,n){if(DL){return DL.save({filename:n,data:b}).then(function(){toast("Saved "+n)}).catch(function(e){if(!e||e.code!=="declined")toast("Couldn’t save: "+((e&&(e.message||e.code))||"error"))})}var a=document.createElement("a");a.href=URL.createObjectURL(b);a.download=n;document.body.appendChild(a);a.click();a.remove();return Promise.resolve()}
-function base(f){return f.name.replace(/\.[^.]+$/,"")}
-function kb(n){return n>1048576?(n/1048576).toFixed(2)+" MB":Math.max(1,Math.round(n/1024))+" KB"}
-function isImg(f){return/^image\//.test(f.type)||/\.(jpe?g|png|webp|gif|bmp)$/i.test(f.name)}
-function list(ul,arr,rm){ul.innerHTML="";arr.forEach(function(f,i){var li=document.createElement("li"),s=document.createElement("span"),b=document.createElement("button");s.textContent=f.name+" · "+kb(f.size);b.textContent="✕";b.setAttribute("aria-label","Remove");b.onclick=function(){rm(i)};li.appendChild(s);li.appendChild(b);ul.appendChild(li)})}
-function pick(inp,cb){inp.addEventListener("change",function(){var a=Array.prototype.slice.call(inp.files||[]);if(a.length)cb(a);setTimeout(function(){inp.value=""},0)})}
-function dropOn(inp,cb){var l=inp.parentNode;["dragover","dragenter"].forEach(function(e){l.addEventListener(e,function(v){v.preventDefault();l.style.background="var(--ice)"})});["dragleave","drop"].forEach(function(e){l.addEventListener(e,function(v){v.preventDefault();l.style.background=""})});l.addEventListener("drop",function(v){var a=Array.prototype.slice.call(v.dataTransfer.files||[]);if(a.length)cb(a)})}
-function wire(inp,cb){pick(inp,cb);dropOn(inp,cb)}
-function loadImg(f){return new Promise(function(r,j){var i=new Image();i.onload=function(){r(i)};i.onerror=function(){j(new Error("Can’t read "+f.name))};i.src=URL.createObjectURL(f)})}
-function toBlob(im,w,h,m,qq){var c=document.createElement("canvas");c.width=w;c.height=h;var x=c.getContext("2d");if(m==="image/jpeg"){x.fillStyle="#fff";x.fillRect(0,0,w,h)}x.drawImage(im,0,0,w,h);return new Promise(function(r){c.toBlob(r,m,qq)})}
-var cf=[],vf=[];
-function setC(a){cf=a;list($("cl"),cf,function(i){cf.splice(i,1);setC(cf)})}
-function setV(a){vf=a;list($("vl"),vf,function(i){vf.splice(i,1);setV(vf)})}
-wire($("cf"),function(a){a=a.filter(isImg);if(a.length)setC([a[0]]);else toast("Please choose an image file.")});
-wire($("vf"),function(a){a=a.filter(isImg);if(a.length)setV(vf.concat(a));else toast("Please choose image files.")});
-async function doCompress(){if(!cf.length){toast("Choose an image first.");return}var f=cf[0],t=(+$("sz").value||0)*($("un").value==="MB"?1048576:1024);if(t<=0){toast("Enter a target size.");return}$("cs").textContent="Compressing…";try{var im=await loadImg(f),w=im.width,h=im.height;for(var s=0;s<10;s++){var lo=.05,hi=.95,best=null;for(var k=0;k<7;k++){var m=(lo+hi)/2,b=await toBlob(im,w,h,"image/jpeg",m);if(b.size<=t){best=b;lo=m}else hi=m}if(best){$("cs").textContent=kb(f.size)+" → "+kb(best.size)+" (saved as JPG)";await save(best,base(f)+"-compressed.jpg");return}w=Math.round(w*.8);h=Math.round(h*.8)}$("cs").textContent="Couldn’t reach that size. Try a larger target."}catch(e){$("cs").textContent="Failed: "+e.message}}
-async function doConvert(){if(!vf.length){toast("Choose image(s) first.");return}var t=$("vt").value,png=t==="PNG";$("vs").textContent="Converting…";try{for(var i=0;i<vf.length;i++){var f=vf[i],im=await loadImg(f),b=await toBlob(im,im.width,im.height,png?"image/png":"image/jpeg",.92);await save(b,base(f)+"."+t.toLowerCase())}$("vs").textContent="Done."}catch(e){$("vs").textContent="Failed: "+e.message}}
-var ACC={"Word to PDF":".doc,.docx","PPT to PDF":".ppt,.pptx","Excel to PDF":".xls,.xlsx,.csv","JPG/PNG to PDF":"image/*","HTML to PDF":".html,.htm"},MULTI={"Merge PDF":1,"JPG/PNG to PDF":1},OPT={"Split PDF":"Pages to extract, e.g. 1-3,5","Organize PDF":"New page order, e.g. 3,1,2 (leave pages out to delete them)"},mf=[],cur2=null;
-function setM(a){mf=a;list($("ml"),mf,function(i){mf.splice(i,1);setM(mf)})}
-wire($("mf"),function(a){if(!cur2)return;setM(MULTI[cur2[0]]?mf.concat(a):a.slice(0,1))});
-function openTool(t){cur2=t;setM([]);$("mt").textContent=t[0];$("mp").textContent=t[1];$("ms").textContent="";var i=$("mf");i.accept=ACC[t[0]]||".pdf,application/pdf";i.multiple=!!MULTI[t[0]];$("mo").innerHTML="";if(OPT[t[0]]){var x=document.createElement("input");x.type="text";x.id="po";x.placeholder=OPT[t[0]];$("mo").appendChild(x)}$("md").hidden=false}
-function closeTool(){$("md").hidden=true;cur2=null}
-$("md").addEventListener("click",function(e){if(e.target===$("md"))closeTool()});
-function pgs(s,n){var o=[];s.split(",").forEach(function(p){p=p.trim();var m=p.match(/^(\d+)\s*-\s*(\d+)$/);if(m){for(var i=+m[1];i<=+m[2];i++)if(i>=1&&i<=n)o.push(i-1)}else if(/^\d+$/.test(p)&&+p>=1&&+p<=n)o.push(+p-1)});return o}
-function pdfBlob(u){return new Blob([u],{type:"application/pdf"})}
-async function ext(f,nm){var P=PDFLib,d=await P.PDFDocument.load(await f.arrayBuffer(),{ignoreEncryption:true}),ix=pgs($("po").value||"",d.getPageCount());if(!ix.length)throw new Error("Enter valid page numbers (the file has "+d.getPageCount()+" pages).");var o=await P.PDFDocument.create();(await o.copyPages(d,ix)).forEach(function(p){o.addPage(p)});await save(pdfBlob(await o.save()),base(f)+"-"+nm+".pdf")}
-var RUN={
-"Merge PDF":async function(fs){var P=PDFLib,o=await P.PDFDocument.create();for(var i=0;i<fs.length;i++){var d=await P.PDFDocument.load(await fs[i].arrayBuffer(),{ignoreEncryption:true});(await o.copyPages(d,d.getPageIndices())).forEach(function(p){o.addPage(p)})}await save(pdfBlob(await o.save()),"merged.pdf")},
-"Split PDF":async function(fs){await ext(fs[0],"split")},
-"Organize PDF":async function(fs){await ext(fs[0],"organized")},
-"JPG/PNG to PDF":async function(fs){var P=PDFLib,o=await P.PDFDocument.create();for(var i=0;i<fs.length;i++){var f=fs[i],im;if(f.type==="image/jpeg"||/\.jpe?g$/i.test(f.name)){im=await o.embedJpg(await f.arrayBuffer())}else if(f.type==="image/png"||/\.png$/i.test(f.name)){im=await o.embedPng(await f.arrayBuffer())}else{var g=await loadImg(f);im=await o.embedPng(await(await toBlob(g,g.width,g.height,"image/png")).arrayBuffer())}o.addPage([im.width,im.height]).drawImage(im,{x:0,y:0,width:im.width,height:im.height})}await save(pdfBlob(await o.save()),"images.pdf")}};
-var EP={"Compress PDF":"compress","Repair PDF":"repair","OCR PDF":"ocr","PDF to Word":"pdf-to-word","PDF to PPT":"pdf-to-ppt","PDF to Excel":"pdf-to-excel","PDF to JPG/PNG":"pdf-to-images","Word to PDF":"office-to-pdf","PPT to PDF":"office-to-pdf","Excel to PDF":"office-to-pdf","HTML to PDF":"html-to-pdf"};
-async function viaServer(n,fs){var fd=new FormData();fd.append("file",fs[0]);var r=await fetch("/api/"+EP[n],{method:"POST",body:fd});if(!r.ok){var t="";try{var j=await r.json();t=j.detail||""}catch(e){}throw new Error(t||("Server error "+r.status))}var cd=r.headers.get("content-disposition")||"",m=cd.match(/filename="?([^";]+)"?/);await save(await r.blob(),m?decodeURIComponent(m[1]):"result")}
-$("mgo").onclick=function(){if(!cur2)return;var n=cur2[0];if(!mf.length){$("ms").textContent="Choose a file first.";return}var fn=RUN[n];if(!fn&&EP[n])fn=function(fs){return viaServer(n,fs)};if(!fn){$("ms").textContent=n+" needs a server-side converter, which Zenvora doesn’t have yet, so nothing was processed or uploaded.";return}if(!window.PDFLib&&RUN[n]){$("ms").textContent="PDF engine failed to load. Check your connection and reload.";return}$("ms").textContent="Working…";fn(mf).then(function(){$("ms").textContent="Done."}).catch(function(e){$("ms").textContent="Failed: "+(e&&e.message||e)})};
-</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+    <script>
+        function $(i) {
+            return document.getElementById(i)
+        }
+        var T = [
+            ["Compress PDF", "Reduce file size while optimizing for maximal PDF quality.", "🗜️", "Optimize"],
+            ["Repair PDF", "Repair a damaged PDF and recover data from a corrupt file.", "🛠️", "Optimize"],
+            ["OCR PDF", "Convert scanned PDFs into searchable, selectable documents.", "🔍", "Optimize"],
+            ["Merge PDF", "Combine PDFs in the order you want with the easiest merger.", "🧩", "Organize"],
+            ["Split PDF", "Separate one page or a whole set into independent PDF files.", "✂️", "Organize"],
+            ["Organize PDF", "Sort pages, delete pages or add new ones to your document.", "🗂️", "Organize"],
+            ["PDF to Word", "Convert PDFs into easy-to-edit DOC and DOCX documents.", "📝", "From PDF"],
+            ["PDF to PPT", "Turn PDFs into easy-to-edit PPT and PPTX slideshows.", "📊", "From PDF"],
+            ["PDF to Excel", "Pull data straight from PDFs into Excel spreadsheets in seconds.", "📈", "From PDF"],
+            ["PDF to JPG/PNG", "Convert each page to JPEG, JPG or PNG, or extract all images.", "🖼️", "From PDF"],
+            ["Word to PDF", "Make DOC and DOCX files easy to read by converting to PDF.", "📄", "To PDF"],
+            ["PPT to PDF", "Make PPT and PPTX files easy to read by converting to PDF.", "📽️", "To PDF"],
+            ["Excel to PDF", "Make Excel spreadsheets easy to read by converting to PDF.", "📑", "To PDF"],
+            ["JPG/PNG to PDF", "Convert images to PDF in seconds and adjust orientation and margins.", "🏞️", "To PDF"],
+            ["HTML to PDF", "Convert a saved web page (HTML file) into a PDF with one click.", "🌐", "To PDF"]
+        ];
+        var cats = ["All", "Optimize", "Organize", "From PDF", "To PDF"],
+            cur = "All",
+            q = $("q");
+
+        function toast(m) {
+            var t = $("toast");
+            t.textContent = m;
+            t.className = "show";
+            clearTimeout(window._t);
+            window._t = setTimeout(function() {
+                t.className = ""
+            }, 2800)
+        }
+
+        function render() {
+            var s = q.value.toLowerCase(),
+                c = $("chips"),
+                g = $("grid");
+            c.innerHTML = "";
+            g.innerHTML = "";
+            cats.forEach(function(k) {
+                var b = document.createElement("button");
+                b.className = "chip" + (k === cur ? " on" : "");
+                b.textContent = k;
+                b.onclick = function() {
+                    cur = k;
+                    render()
+                };
+                c.appendChild(b)
+            });
+            T.filter(function(t) {
+                return (cur === "All" || t[3] === cur) && (t[0] + " " + t[1]).toLowerCase().indexOf(s) > -1
+            }).forEach(function(t) {
+                var d = document.createElement("div");
+                d.className = "card";
+                d.innerHTML = '<div class="ic">' + t[2] + '</div><h3>' + t[0] + '</h3><p>' + t[1] + '</p>';
+                d.onclick = function() {
+                    openTool(t)
+                };
+                g.appendChild(d)
+            });
+            if (!g.children.length) g.innerHTML = '<p class="sub">No tools match your search.</p>'
+        }
+        q.oninput = render;
+        render();
+
+        function route() {
+            var v = location.hash === "#images" ? "images" : "pdf";
+            $("v-pdf").hidden = v !== "pdf";
+            $("v-img").hidden = v !== "images";
+            $("n-pdf").className = v === "pdf" ? "on" : "";
+            $("n-img").className = v === "images" ? "on" : "";
+            window.scrollTo(0, 0)
+        }
+        addEventListener("hashchange", route);
+        route();
+
+        function goContact(e) {
+            e.preventDefault();
+            $("contact").scrollIntoView({
+                behavior: "smooth"
+            })
+        }
+        var DL = null;
+        try {
+            if (window.claude && claude.use) claude.use("downloads").then(function(d) {
+                DL = d
+            }).catch(function() {})
+        } catch (e) {}
+
+        function save(b, n) {
+            if (DL) {
+                return DL.save({
+                    filename: n,
+                    data: b
+                }).then(function() {
+                    toast("Saved " + n)
+                }).catch(function(e) {
+                    if (!e || e.code !== "declined") toast("Couldn’t save: " + ((e && (e.message || e.code)) || "error"))
+                })
+            }
+            var a = document.createElement("a");
+            a.href = URL.createObjectURL(b);
+            a.download = n;
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+            return Promise.resolve()
+        }
+
+        function base(f) {
+            return f.name.replace(/\.[^.]+$/, "")
+        }
+
+        function kb(n) {
+            return n > 1048576 ? (n / 1048576).toFixed(2) + " MB" : Math.max(1, Math.round(n / 1024)) + " KB"
+        }
+
+        function isImg(f) {
+            return /^image\//.test(f.type) || /\.(jpe?g|png|webp|gif|bmp)$/i.test(f.name)
+        }
+
+        function list(ul, arr, rm) {
+            ul.innerHTML = "";
+            arr.forEach(function(f, i) {
+                var li = document.createElement("li"),
+                    s = document.createElement("span"),
+                    b = document.createElement("button");
+                s.textContent = f.name + " · " + kb(f.size);
+                b.textContent = "✕";
+                b.setAttribute("aria-label", "Remove");
+                b.onclick = function() {
+                    rm(i)
+                };
+                li.appendChild(s);
+                li.appendChild(b);
+                ul.appendChild(li)
+            })
+        }
+
+        function pick(inp, cb) {
+            inp.addEventListener("change", function() {
+                var a = Array.prototype.slice.call(inp.files || []);
+                if (a.length) cb(a);
+                setTimeout(function() {
+                    inp.value = ""
+                }, 0)
+            })
+        }
+
+        function dropOn(inp, cb) {
+            var l = inp.parentNode;
+            ["dragover", "dragenter"].forEach(function(e) {
+                l.addEventListener(e, function(v) {
+                    v.preventDefault();
+                    l.style.background = "var(--ice)"
+                })
+            });
+            ["dragleave", "drop"].forEach(function(e) {
+                l.addEventListener(e, function(v) {
+                    v.preventDefault();
+                    l.style.background = ""
+                })
+            });
+            l.addEventListener("drop", function(v) {
+                var a = Array.prototype.slice.call(v.dataTransfer.files || []);
+                if (a.length) cb(a)
+            })
+        }
+
+        function wire(inp, cb) {
+            pick(inp, cb);
+            dropOn(inp, cb)
+        }
+
+        function loadImg(f) {
+            return new Promise(function(r, j) {
+                var i = new Image();
+                i.onload = function() {
+                    r(i)
+                };
+                i.onerror = function() {
+                    j(new Error("Can’t read " + f.name))
+                };
+                i.src = URL.createObjectURL(f)
+            })
+        }
+
+        function toBlob(im, w, h, m, qq) {
+            var c = document.createElement("canvas");
+            c.width = w;
+            c.height = h;
+            var x = c.getContext("2d");
+            if (m === "image/jpeg") {
+                x.fillStyle = "#fff";
+                x.fillRect(0, 0, w, h)
+            }
+            x.drawImage(im, 0, 0, w, h);
+            return new Promise(function(r) {
+                c.toBlob(r, m, qq)
+            })
+        }
+        var cf = [],
+            vf = [];
+
+        function setC(a) {
+            cf = a;
+            list($("cl"), cf, function(i) {
+                cf.splice(i, 1);
+                setC(cf)
+            })
+        }
+
+        function setV(a) {
+            vf = a;
+            list($("vl"), vf, function(i) {
+                vf.splice(i, 1);
+                setV(vf)
+            })
+        }
+        wire($("cf"), function(a) {
+            a = a.filter(isImg);
+            if (a.length) setC([a[0]]);
+            else toast("Please choose an image file.")
+        });
+        wire($("vf"), function(a) {
+            a = a.filter(isImg);
+            if (a.length) setV(vf.concat(a));
+            else toast("Please choose image files.")
+        });
+        async function doCompress() {
+            if (!cf.length) {
+                toast("Choose an image first.");
+                return
+            }
+            var f = cf[0],
+                t = (+$("sz").value || 0) * ($("un").value === "MB" ? 1048576 : 1024);
+            if (t <= 0) {
+                toast("Enter a target size.");
+                return
+            }
+            $("cs").textContent = "Compressing…";
+            try {
+                var im = await loadImg(f),
+                    w = im.width,
+                    h = im.height;
+                for (var s = 0; s < 10; s++) {
+                    var lo = .05,
+                        hi = .95,
+                        best = null;
+                    for (var k = 0; k < 7; k++) {
+                        var m = (lo + hi) / 2,
+                            b = await toBlob(im, w, h, "image/jpeg", m);
+                        if (b.size <= t) {
+                            best = b;
+                            lo = m
+                        } else hi = m
+                    }
+                    if (best) {
+                        $("cs").textContent = kb(f.size) + " → " + kb(best.size) + " (saved as JPG)";
+                        await save(best, base(f) + "-compressed.jpg");
+                        return
+                    }
+                    w = Math.round(w * .8);
+                    h = Math.round(h * .8)
+                }
+                $("cs").textContent = "Couldn’t reach that size. Try a larger target."
+            } catch (e) {
+                $("cs").textContent = "Failed: " + e.message
+            }
+        }
+        async function doConvert() {
+            if (!vf.length) {
+                toast("Choose image(s) first.");
+                return
+            }
+            var t = $("vt").value,
+                png = t === "PNG";
+            $("vs").textContent = "Converting…";
+            try {
+                for (var i = 0; i < vf.length; i++) {
+                    var f = vf[i],
+                        im = await loadImg(f),
+                        b = await toBlob(im, im.width, im.height, png ? "image/png" : "image/jpeg", .92);
+                    await save(b, base(f) + "." + t.toLowerCase())
+                }
+                $("vs").textContent = "Done."
+            } catch (e) {
+                $("vs").textContent = "Failed: " + e.message
+            }
+        }
+        var ACC = {
+                "Word to PDF": ".doc,.docx",
+                "PPT to PDF": ".ppt,.pptx",
+                "Excel to PDF": ".xls,.xlsx,.csv",
+                "JPG/PNG to PDF": "image/*",
+                "HTML to PDF": ".html,.htm"
+            },
+            MULTI = {
+                "Merge PDF": 1,
+                "JPG/PNG to PDF": 1
+            },
+            OPT = {
+                "Split PDF": "Pages to extract, e.g. 1-3,5",
+                "Organize PDF": "New page order, e.g. 3,1,2 (leave pages out to delete them)"
+            },
+            mf = [],
+            cur2 = null;
+
+        function setM(a) {
+            mf = a;
+            list($("ml"), mf, function(i) {
+                mf.splice(i, 1);
+                setM(mf)
+            })
+        }
+        wire($("mf"), function(a) {
+            if (!cur2) return;
+            setM(MULTI[cur2[0]] ? mf.concat(a) : a.slice(0, 1))
+        });
+
+        function openTool(t) {
+            cur2 = t;
+            setM([]);
+            $("mt").textContent = t[0];
+            $("mp").textContent = t[1];
+            $("ms").textContent = "";
+            var i = $("mf");
+            i.accept = ACC[t[0]] || ".pdf,application/pdf";
+            i.multiple = !!MULTI[t[0]];
+            $("mo").innerHTML = "";
+            if (OPT[t[0]]) {
+                var x = document.createElement("input");
+                x.type = "text";
+                x.id = "po";
+                x.placeholder = OPT[t[0]];
+                $("mo").appendChild(x)
+            }
+            $("md").hidden = false
+        }
+
+        function closeTool() {
+            $("md").hidden = true;
+            cur2 = null
+        }
+        $("md").addEventListener("click", function(e) {
+            if (e.target === $("md")) closeTool()
+        });
+
+        function pgs(s, n) {
+            var o = [];
+            s.split(",").forEach(function(p) {
+                p = p.trim();
+                var m = p.match(/^(\d+)\s*-\s*(\d+)$/);
+                if (m) {
+                    for (var i = +m[1]; i <= +m[2]; i++)
+                        if (i >= 1 && i <= n) o.push(i - 1)
+                } else if (/^\d+$/.test(p) && +p >= 1 && +p <= n) o.push(+p - 1)
+            });
+            return o
+        }
+
+        function pdfBlob(u) {
+            return new Blob([u], {
+                type: "application/pdf"
+            })
+        }
+        async function ext(f, nm) {
+            var P = PDFLib,
+                d = await P.PDFDocument.load(await f.arrayBuffer(), {
+                    ignoreEncryption: true
+                }),
+                ix = pgs($("po").value || "", d.getPageCount());
+            if (!ix.length) throw new Error("Enter valid page numbers (the file has " + d.getPageCount() + " pages).");
+            var o = await P.PDFDocument.create();
+            (await o.copyPages(d, ix)).forEach(function(p) {
+                o.addPage(p)
+            });
+            await save(pdfBlob(await o.save()), base(f) + "-" + nm + ".pdf")
+        }
+        var RUN = {
+            "Merge PDF": async function(fs) {
+                var P = PDFLib,
+                    o = await P.PDFDocument.create();
+                for (var i = 0; i < fs.length; i++) {
+                    var d = await P.PDFDocument.load(await fs[i].arrayBuffer(), {
+                        ignoreEncryption: true
+                    });
+                    (await o.copyPages(d, d.getPageIndices())).forEach(function(p) {
+                        o.addPage(p)
+                    })
+                }
+                await save(pdfBlob(await o.save()), "merged.pdf")
+            },
+            "Split PDF": async function(fs) {
+                await ext(fs[0], "split")
+            },
+            "Organize PDF": async function(fs) {
+                await ext(fs[0], "organized")
+            },
+            "JPG/PNG to PDF": async function(fs) {
+                var P = PDFLib,
+                    o = await P.PDFDocument.create();
+                for (var i = 0; i < fs.length; i++) {
+                    var f = fs[i],
+                        im;
+                    if (f.type === "image/jpeg" || /\.jpe?g$/i.test(f.name)) {
+                        im = await o.embedJpg(await f.arrayBuffer())
+                    } else if (f.type === "image/png" || /\.png$/i.test(f.name)) {
+                        im = await o.embedPng(await f.arrayBuffer())
+                    } else {
+                        var g = await loadImg(f);
+                        im = await o.embedPng(await (await toBlob(g, g.width, g.height, "image/png")).arrayBuffer())
+                    }
+                    o.addPage([im.width, im.height]).drawImage(im, {
+                        x: 0,
+                        y: 0,
+                        width: im.width,
+                        height: im.height
+                    })
+                }
+                await save(pdfBlob(await o.save()), "images.pdf")
+            }
+        };
+        var EP = {
+            "Compress PDF": "compress",
+            "Repair PDF": "repair",
+            "OCR PDF": "ocr",
+            "PDF to Word": "pdf-to-word",
+            "PDF to PPT": "pdf-to-ppt",
+            "PDF to Excel": "pdf-to-excel",
+            "PDF to JPG/PNG": "pdf-to-images",
+            "Word to PDF": "office-to-pdf",
+            "PPT to PDF": "office-to-pdf",
+            "Excel to PDF": "office-to-pdf",
+            "HTML to PDF": "html-to-pdf"
+        };
+        async function viaServer(n, fs) {
+            var fd = new FormData();
+            fd.append("file", fs[0]);
+            var r = await fetch("/api/" + EP[n], {
+                method: "POST",
+                body: fd
+            });
+            if (!r.ok) {
+                var t = "";
+                try {
+                    var j = await r.json();
+                    t = j.detail || ""
+                } catch (e) {}
+                throw new Error(t || ("Server error " + r.status))
+            }
+            var cd = r.headers.get("content-disposition") || "",
+                m = cd.match(/filename="?([^";]+)"?/);
+            await save(await r.blob(), m ? decodeURIComponent(m[1]) : "result")
+        }
+        $("mgo").onclick = function() {
+            if (!cur2) return;
+            var n = cur2[0];
+            if (!mf.length) {
+                $("ms").textContent = "Choose a file first.";
+                return
+            }
+            var fn = RUN[n];
+            if (!fn && EP[n]) fn = function(fs) {
+                return viaServer(n, fs)
+            };
+            if (!fn) {
+                $("ms").textContent = n + " needs a server-side converter, which Zenvora doesn’t have yet, so nothing was processed or uploaded.";
+                return
+            }
+            if (!window.PDFLib && RUN[n]) {
+                $("ms").textContent = "PDF engine failed to load. Check your connection and reload.";
+                return
+            }
+            $("ms").textContent = "Working…";
+            fn(mf).then(function() {
+                $("ms").textContent = "Done."
+            }).catch(function(e) {
+                $("ms").textContent = "Failed: " + (e && e.message || e)
+            })
+        };
+    </script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(() => console.log('Zenvora Service Worker Registered'))
+                    .catch(error => console.error('Service Worker Error:', error));
+            });
+        }
+    </script>
 </body>
+
 </html>
